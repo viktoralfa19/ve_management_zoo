@@ -1,0 +1,62 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30907.101
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WebApi", "WebApi", "{5C6D9AE1-1998-42F4-BDEA-A3545202E2A1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{0FB8AB13-D750-4F45-B67B-DEFD01259909}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "General", "General", "{E7843169-EC56-462F-9AEA-560F4AC20313}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dto", "Dto\Dto.csproj", "{4B31E758-420D-4180-A040-DCC081318B58}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZooService", "ZooService\ZooService.csproj", "{E281BAF6-C562-4F03-9B50-DE5A2E35A0C9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApiZoo", "ApiZoo\ApiZoo.csproj", "{9F5E9973-F528-4B43-B45D-F85DF182089D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SecurityService", "SecurityService\SecurityService.csproj", "{A3C6D31A-F7F1-4E18-98ED-BF871C8C2580}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApiSecurity", "ApiSecurity\ApiSecurity.csproj", "{29B91D76-8D45-4E9B-8E5E-E97725DE2D9C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4B31E758-420D-4180-A040-DCC081318B58}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4B31E758-420D-4180-A040-DCC081318B58}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4B31E758-420D-4180-A040-DCC081318B58}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4B31E758-420D-4180-A040-DCC081318B58}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E281BAF6-C562-4F03-9B50-DE5A2E35A0C9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E281BAF6-C562-4F03-9B50-DE5A2E35A0C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E281BAF6-C562-4F03-9B50-DE5A2E35A0C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E281BAF6-C562-4F03-9B50-DE5A2E35A0C9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9F5E9973-F528-4B43-B45D-F85DF182089D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9F5E9973-F528-4B43-B45D-F85DF182089D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9F5E9973-F528-4B43-B45D-F85DF182089D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9F5E9973-F528-4B43-B45D-F85DF182089D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A3C6D31A-F7F1-4E18-98ED-BF871C8C2580}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A3C6D31A-F7F1-4E18-98ED-BF871C8C2580}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A3C6D31A-F7F1-4E18-98ED-BF871C8C2580}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A3C6D31A-F7F1-4E18-98ED-BF871C8C2580}.Release|Any CPU.Build.0 = Release|Any CPU
+		{29B91D76-8D45-4E9B-8E5E-E97725DE2D9C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{29B91D76-8D45-4E9B-8E5E-E97725DE2D9C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{29B91D76-8D45-4E9B-8E5E-E97725DE2D9C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{29B91D76-8D45-4E9B-8E5E-E97725DE2D9C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{4B31E758-420D-4180-A040-DCC081318B58} = {E7843169-EC56-462F-9AEA-560F4AC20313}
+		{E281BAF6-C562-4F03-9B50-DE5A2E35A0C9} = {0FB8AB13-D750-4F45-B67B-DEFD01259909}
+		{9F5E9973-F528-4B43-B45D-F85DF182089D} = {5C6D9AE1-1998-42F4-BDEA-A3545202E2A1}
+		{A3C6D31A-F7F1-4E18-98ED-BF871C8C2580} = {0FB8AB13-D750-4F45-B67B-DEFD01259909}
+		{29B91D76-8D45-4E9B-8E5E-E97725DE2D9C} = {5C6D9AE1-1998-42F4-BDEA-A3545202E2A1}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F199F4FD-DF76-43FF-A54C-E6ECF5B657E5}
+	EndGlobalSection
+EndGlobal
