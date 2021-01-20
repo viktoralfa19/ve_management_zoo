@@ -1,0 +1,378 @@
+{
+	"id": "ddee87e1-1f3e-f469-3ce3-7f9769929fdc",
+	"name": "API ZOO",
+	"description": "",
+	"order": [
+		"5803f355-ce0f-c74d-12a5-611d8b6ac1c7",
+		"22adad33-993f-79ae-499a-1a8be0a2e3df",
+		"eb574565-16ed-f438-0a91-100879b3f5e1",
+		"be7c4ecc-915a-2d34-96af-4cae752e9604",
+		"c165fc29-55e1-8461-3b6a-b0e738461892",
+		"eda495fc-8b2b-e98c-339e-f5caa5d68d2d",
+		"9ff5a87a-6ab9-133d-5868-74d983661ccd",
+		"33d5ea36-d2a2-4518-1f71-ce3890327764",
+		"723bcc6e-3e15-852f-cdc3-c7e5889ff92e",
+		"a499546c-1995-972f-0db1-a5de34f56bbe"
+	],
+	"folders": [],
+	"folders_order": [],
+	"timestamp": 1611029878639,
+	"owner": "4273371",
+	"public": false,
+	"requests": [
+		{
+			"id": "22adad33-993f-79ae-499a-1a8be0a2e3df",
+			"headers": "Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6InZlY2hldmVycmlhIiwibmFtZWlkIjoiZmNjMmQxNTYtNmU0Zi00NDFlLTkyMTMtMGVkNTQzMDVhNWI1Iiwicm9sZSI6IkFkbWluaXN0cmFkb3IiLCJuYmYiOjE2MTExNzYxMzYsImV4cCI6MTYxMTI2MjUzNiwiaWF0IjoxNjExMTc2MTM2LCJpc3MiOiJodHRwczovL2xvY2FsaG9zdDo1MDAwL3Rva2VuIiwiYXVkIjoiaHR0cHM6Ly9sb2NhbGhvc3Q6NTAwMC8ifQ.oMgq-lS1Qd_Z_98R8hS-LQlTsIlpTCIx0-rFY_Di4qQ\n",
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6InZlY2hldmVycmlhIiwibmFtZWlkIjoiZmNjMmQxNTYtNmU0Zi00NDFlLTkyMTMtMGVkNTQzMDVhNWI1Iiwicm9sZSI6IkFkbWluaXN0cmFkb3IiLCJuYmYiOjE2MTExNzYxMzYsImV4cCI6MTYxMTI2MjUzNiwiaWF0IjoxNjExMTc2MTM2LCJpc3MiOiJodHRwczovL2xvY2FsaG9zdDo1MDAwL3Rva2VuIiwiYXVkIjoiaHR0cHM6Ly9sb2NhbGhvc3Q6NTAwMC8ifQ.oMgq-lS1Qd_Z_98R8hS-LQlTsIlpTCIx0-rFY_Di4qQ",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:5011/api/v1/TypesAnimals",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": null,
+			"dataMode": "params",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1611179166733,
+			"name": "Get All Types Animals",
+			"description": "",
+			"collectionId": "ddee87e1-1f3e-f469-3ce3-7f9769929fdc",
+			"responses": []
+		},
+		{
+			"id": "33d5ea36-d2a2-4518-1f71-ce3890327764",
+			"headers": "Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6InZlY2hldmVycmlhIiwibmFtZWlkIjoiZmNjMmQxNTYtNmU0Zi00NDFlLTkyMTMtMGVkNTQzMDVhNWI1Iiwicm9sZSI6IkFkbWluaXN0cmFkb3IiLCJuYmYiOjE2MTExNzYxMzYsImV4cCI6MTYxMTI2MjUzNiwiaWF0IjoxNjExMTc2MTM2LCJpc3MiOiJodHRwczovL2xvY2FsaG9zdDo1MDAwL3Rva2VuIiwiYXVkIjoiaHR0cHM6Ly9sb2NhbGhvc3Q6NTAwMC8ifQ.oMgq-lS1Qd_Z_98R8hS-LQlTsIlpTCIx0-rFY_Di4qQ\n",
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6InZlY2hldmVycmlhIiwibmFtZWlkIjoiZmNjMmQxNTYtNmU0Zi00NDFlLTkyMTMtMGVkNTQzMDVhNWI1Iiwicm9sZSI6IkFkbWluaXN0cmFkb3IiLCJuYmYiOjE2MTExNzYxMzYsImV4cCI6MTYxMTI2MjUzNiwiaWF0IjoxNjExMTc2MTM2LCJpc3MiOiJodHRwczovL2xvY2FsaG9zdDo1MDAwL3Rva2VuIiwiYXVkIjoiaHR0cHM6Ly9sb2NhbGhvc3Q6NTAwMC8ifQ.oMgq-lS1Qd_Z_98R8hS-LQlTsIlpTCIx0-rFY_Di4qQ",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:5011/api/v1/Animals/2",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "DELETE",
+			"data": null,
+			"dataMode": "params",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1611179177226,
+			"name": "Delete Animal",
+			"description": "",
+			"collectionId": "ddee87e1-1f3e-f469-3ce3-7f9769929fdc",
+			"responses": []
+		},
+		{
+			"id": "5803f355-ce0f-c74d-12a5-611d8b6ac1c7",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:5010/api/v1/Authentication",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1611179164958,
+			"name": "Authenticate",
+			"description": "",
+			"collectionId": "ddee87e1-1f3e-f469-3ce3-7f9769929fdc",
+			"responses": [],
+			"rawModeData": "{\r\n  \"username\": \"vecheverria\",\r\n  \"password\": \"Vecheverria.2020\"\r\n}"
+		},
+		{
+			"id": "723bcc6e-3e15-852f-cdc3-c7e5889ff92e",
+			"headers": "Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6InZlY2hldmVycmlhIiwibmFtZWlkIjoiZmNjMmQxNTYtNmU0Zi00NDFlLTkyMTMtMGVkNTQzMDVhNWI1Iiwicm9sZSI6IkFkbWluaXN0cmFkb3IiLCJuYmYiOjE2MTExNzYxMzYsImV4cCI6MTYxMTI2MjUzNiwiaWF0IjoxNjExMTc2MTM2LCJpc3MiOiJodHRwczovL2xvY2FsaG9zdDo1MDAwL3Rva2VuIiwiYXVkIjoiaHR0cHM6Ly9sb2NhbGhvc3Q6NTAwMC8ifQ.oMgq-lS1Qd_Z_98R8hS-LQlTsIlpTCIx0-rFY_Di4qQ\nContent-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6InZlY2hldmVycmlhIiwibmFtZWlkIjoiZmNjMmQxNTYtNmU0Zi00NDFlLTkyMTMtMGVkNTQzMDVhNWI1Iiwicm9sZSI6IkFkbWluaXN0cmFkb3IiLCJuYmYiOjE2MTExNzYxMzYsImV4cCI6MTYxMTI2MjUzNiwiaWF0IjoxNjExMTc2MTM2LCJpc3MiOiJodHRwczovL2xvY2FsaG9zdDo1MDAwL3Rva2VuIiwiYXVkIjoiaHR0cHM6Ly9sb2NhbGhvc3Q6NTAwMC8ifQ.oMgq-lS1Qd_Z_98R8hS-LQlTsIlpTCIx0-rFY_Di4qQ",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:5011/api/v1/Animals/1",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "PATCH",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1611179178888,
+			"name": "Partial Update Animal",
+			"description": "",
+			"collectionId": "ddee87e1-1f3e-f469-3ce3-7f9769929fdc",
+			"responses": [],
+			"rawModeData": "[\r\n\t{\"op\" : \"replace\", \"path\" : \"Name\", \"value\" : \"Leonidas\"}\r\n]"
+		},
+		{
+			"id": "9ff5a87a-6ab9-133d-5868-74d983661ccd",
+			"headers": "Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6InZlY2hldmVycmlhIiwibmFtZWlkIjoiZmNjMmQxNTYtNmU0Zi00NDFlLTkyMTMtMGVkNTQzMDVhNWI1Iiwicm9sZSI6IkFkbWluaXN0cmFkb3IiLCJuYmYiOjE2MTExNzYxMzYsImV4cCI6MTYxMTI2MjUzNiwiaWF0IjoxNjExMTc2MTM2LCJpc3MiOiJodHRwczovL2xvY2FsaG9zdDo1MDAwL3Rva2VuIiwiYXVkIjoiaHR0cHM6Ly9sb2NhbGhvc3Q6NTAwMC8ifQ.oMgq-lS1Qd_Z_98R8hS-LQlTsIlpTCIx0-rFY_Di4qQ\nContent-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6InZlY2hldmVycmlhIiwibmFtZWlkIjoiZmNjMmQxNTYtNmU0Zi00NDFlLTkyMTMtMGVkNTQzMDVhNWI1Iiwicm9sZSI6IkFkbWluaXN0cmFkb3IiLCJuYmYiOjE2MTExNzYxMzYsImV4cCI6MTYxMTI2MjUzNiwiaWF0IjoxNjExMTc2MTM2LCJpc3MiOiJodHRwczovL2xvY2FsaG9zdDo1MDAwL3Rva2VuIiwiYXVkIjoiaHR0cHM6Ly9sb2NhbGhvc3Q6NTAwMC8ifQ.oMgq-lS1Qd_Z_98R8hS-LQlTsIlpTCIx0-rFY_Di4qQ",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:5011/api/v1/Animals/2",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "PUT",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1611179175547,
+			"name": "Update Animal",
+			"description": "",
+			"collectionId": "ddee87e1-1f3e-f469-3ce3-7f9769929fdc",
+			"responses": [],
+			"rawModeData": "{\n\t\"code\": \"LN002\",\n\t\"name\": \"Kaly\",\n    \"dateAdmission\": \"2019-12-21\",\n    \"weight\": 234.5,\n    \"idAnimalType\": 1\n}"
+		},
+		{
+			"id": "a499546c-1995-972f-0db1-a5de34f56bbe",
+			"headers": "Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6InZlY2hldmVycmlhIiwibmFtZWlkIjoiZmNjMmQxNTYtNmU0Zi00NDFlLTkyMTMtMGVkNTQzMDVhNWI1Iiwicm9sZSI6IkFkbWluaXN0cmFkb3IiLCJuYmYiOjE2MTExNzEwMjksImV4cCI6MTYxMTI1NzQyOSwiaWF0IjoxNjExMTcxMDI5LCJpc3MiOiJodHRwczovL2xvY2FsaG9zdDo1MDAwL3Rva2VuIiwiYXVkIjoiaHR0cHM6Ly9sb2NhbGhvc3Q6NTAwMC8ifQ.4fsQ-kv-HrIndJl3T4QL0jIMsiwmfe4WvyFWHOB5sDY\n",
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6InZlY2hldmVycmlhIiwibmFtZWlkIjoiZmNjMmQxNTYtNmU0Zi00NDFlLTkyMTMtMGVkNTQzMDVhNWI1Iiwicm9sZSI6IkFkbWluaXN0cmFkb3IiLCJuYmYiOjE2MTExNzEwMjksImV4cCI6MTYxMTI1NzQyOSwiaWF0IjoxNjExMTcxMDI5LCJpc3MiOiJodHRwczovL2xvY2FsaG9zdDo1MDAwL3Rva2VuIiwiYXVkIjoiaHR0cHM6Ly9sb2NhbGhvc3Q6NTAwMC8ifQ.4fsQ-kv-HrIndJl3T4QL0jIMsiwmfe4WvyFWHOB5sDY",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:5011/api/v1/Animals/1",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": null,
+			"dataMode": "params",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1611179181132,
+			"name": "Get by Id Animal",
+			"description": "",
+			"collectionId": "ddee87e1-1f3e-f469-3ce3-7f9769929fdc",
+			"responses": []
+		},
+		{
+			"id": "be7c4ecc-915a-2d34-96af-4cae752e9604",
+			"headers": "Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6InZlY2hldmVycmlhIiwibmFtZWlkIjoiZmNjMmQxNTYtNmU0Zi00NDFlLTkyMTMtMGVkNTQzMDVhNWI1Iiwicm9sZSI6IkFkbWluaXN0cmFkb3IiLCJuYmYiOjE2MTExNzg1NzEsImV4cCI6MTYxMTI2NDk3MSwiaWF0IjoxNjExMTc4NTcxLCJpc3MiOiJodHRwczovL2xvY2FsaG9zdDo1MDAwL3Rva2VuIiwiYXVkIjoiaHR0cHM6Ly9sb2NhbGhvc3Q6NTAwMC8ifQ.xsAz6qCwFJuSBc4dQ9aB4zqPIBs7qJs0zyW-K1TYZHA\nContent-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6InZlY2hldmVycmlhIiwibmFtZWlkIjoiZmNjMmQxNTYtNmU0Zi00NDFlLTkyMTMtMGVkNTQzMDVhNWI1Iiwicm9sZSI6IkFkbWluaXN0cmFkb3IiLCJuYmYiOjE2MTExNzg1NzEsImV4cCI6MTYxMTI2NDk3MSwiaWF0IjoxNjExMTc4NTcxLCJpc3MiOiJodHRwczovL2xvY2FsaG9zdDo1MDAwL3Rva2VuIiwiYXVkIjoiaHR0cHM6Ly9sb2NhbGhvc3Q6NTAwMC8ifQ.xsAz6qCwFJuSBc4dQ9aB4zqPIBs7qJs0zyW-K1TYZHA",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:5011/api/v1/Animals?$select=data&$expand=data($select=Name,Weight,TypeName;$skip=0;$top=3;$filter=TypeName eq 'León')",
+			"queryParams": [
+				{
+					"key": "$select",
+					"value": "data",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "$expand",
+					"value": "data($select=Name,Weight,TypeName;$skip=0;$top=3;$filter=TypeName eq 'León')",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				}
+			],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": null,
+			"dataMode": "params",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1611179170449,
+			"name": "Get All Animals Filter ODATA",
+			"description": "",
+			"collectionId": "ddee87e1-1f3e-f469-3ce3-7f9769929fdc",
+			"responses": []
+		},
+		{
+			"id": "c165fc29-55e1-8461-3b6a-b0e738461892",
+			"headers": "Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6InZlY2hldmVycmlhIiwibmFtZWlkIjoiZmNjMmQxNTYtNmU0Zi00NDFlLTkyMTMtMGVkNTQzMDVhNWI1Iiwicm9sZSI6IkFkbWluaXN0cmFkb3IiLCJuYmYiOjE2MTExNzYxMzYsImV4cCI6MTYxMTI2MjUzNiwiaWF0IjoxNjExMTc2MTM2LCJpc3MiOiJodHRwczovL2xvY2FsaG9zdDo1MDAwL3Rva2VuIiwiYXVkIjoiaHR0cHM6Ly9sb2NhbGhvc3Q6NTAwMC8ifQ.oMgq-lS1Qd_Z_98R8hS-LQlTsIlpTCIx0-rFY_Di4qQ\nContent-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6InZlY2hldmVycmlhIiwibmFtZWlkIjoiZmNjMmQxNTYtNmU0Zi00NDFlLTkyMTMtMGVkNTQzMDVhNWI1Iiwicm9sZSI6IkFkbWluaXN0cmFkb3IiLCJuYmYiOjE2MTExNzYxMzYsImV4cCI6MTYxMTI2MjUzNiwiaWF0IjoxNjExMTc2MTM2LCJpc3MiOiJodHRwczovL2xvY2FsaG9zdDo1MDAwL3Rva2VuIiwiYXVkIjoiaHR0cHM6Ly9sb2NhbGhvc3Q6NTAwMC8ifQ.oMgq-lS1Qd_Z_98R8hS-LQlTsIlpTCIx0-rFY_Di4qQ",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:5011/api/v1/Animals",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": null,
+			"dataMode": "params",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1611179172238,
+			"name": "Get All Animals",
+			"description": "",
+			"collectionId": "ddee87e1-1f3e-f469-3ce3-7f9769929fdc",
+			"responses": []
+		},
+		{
+			"id": "eb574565-16ed-f438-0a91-100879b3f5e1",
+			"headers": "Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6InZlY2hldmVycmlhIiwibmFtZWlkIjoiZmNjMmQxNTYtNmU0Zi00NDFlLTkyMTMtMGVkNTQzMDVhNWI1Iiwicm9sZSI6IkFkbWluaXN0cmFkb3IiLCJuYmYiOjE2MTExNzYxMzYsImV4cCI6MTYxMTI2MjUzNiwiaWF0IjoxNjExMTc2MTM2LCJpc3MiOiJodHRwczovL2xvY2FsaG9zdDo1MDAwL3Rva2VuIiwiYXVkIjoiaHR0cHM6Ly9sb2NhbGhvc3Q6NTAwMC8ifQ.oMgq-lS1Qd_Z_98R8hS-LQlTsIlpTCIx0-rFY_Di4qQ\n",
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6InZlY2hldmVycmlhIiwibmFtZWlkIjoiZmNjMmQxNTYtNmU0Zi00NDFlLTkyMTMtMGVkNTQzMDVhNWI1Iiwicm9sZSI6IkFkbWluaXN0cmFkb3IiLCJuYmYiOjE2MTExNzYxMzYsImV4cCI6MTYxMTI2MjUzNiwiaWF0IjoxNjExMTc2MTM2LCJpc3MiOiJodHRwczovL2xvY2FsaG9zdDo1MDAwL3Rva2VuIiwiYXVkIjoiaHR0cHM6Ly9sb2NhbGhvc3Q6NTAwMC8ifQ.oMgq-lS1Qd_Z_98R8hS-LQlTsIlpTCIx0-rFY_Di4qQ",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:5011/api/v1/TypesAnimals?$select=data&$expand=data($filter = Name eq 'León')",
+			"queryParams": [
+				{
+					"key": "$select",
+					"value": "data",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "$expand",
+					"value": "data($filter = Name eq 'León')",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				}
+			],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": null,
+			"dataMode": "params",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1611179168666,
+			"name": "Get All Types Animals  Filter ODATA",
+			"description": "",
+			"collectionId": "ddee87e1-1f3e-f469-3ce3-7f9769929fdc",
+			"responses": []
+		},
+		{
+			"id": "eda495fc-8b2b-e98c-339e-f5caa5d68d2d",
+			"headers": "Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6InZlY2hldmVycmlhIiwibmFtZWlkIjoiZmNjMmQxNTYtNmU0Zi00NDFlLTkyMTMtMGVkNTQzMDVhNWI1Iiwicm9sZSI6IkFkbWluaXN0cmFkb3IiLCJuYmYiOjE2MTExNzYxMzYsImV4cCI6MTYxMTI2MjUzNiwiaWF0IjoxNjExMTc2MTM2LCJpc3MiOiJodHRwczovL2xvY2FsaG9zdDo1MDAwL3Rva2VuIiwiYXVkIjoiaHR0cHM6Ly9sb2NhbGhvc3Q6NTAwMC8ifQ.oMgq-lS1Qd_Z_98R8hS-LQlTsIlpTCIx0-rFY_Di4qQ\nContent-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6InZlY2hldmVycmlhIiwibmFtZWlkIjoiZmNjMmQxNTYtNmU0Zi00NDFlLTkyMTMtMGVkNTQzMDVhNWI1Iiwicm9sZSI6IkFkbWluaXN0cmFkb3IiLCJuYmYiOjE2MTExNzYxMzYsImV4cCI6MTYxMTI2MjUzNiwiaWF0IjoxNjExMTc2MTM2LCJpc3MiOiJodHRwczovL2xvY2FsaG9zdDo1MDAwL3Rva2VuIiwiYXVkIjoiaHR0cHM6Ly9sb2NhbGhvc3Q6NTAwMC8ifQ.oMgq-lS1Qd_Z_98R8hS-LQlTsIlpTCIx0-rFY_Di4qQ",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:5011/api/v1/Animals",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1611179173956,
+			"name": "Create Animal",
+			"description": "",
+			"collectionId": "ddee87e1-1f3e-f469-3ce3-7f9769929fdc",
+			"responses": [],
+			"rawModeData": "{\r\n  \"code\": \"LN002\",\r\n  \"name\": \"Leonidas\",\r\n  \"dateAdmission\": \"2019-12-21\",\r\n  \"weight\": 220.3,\r\n  \"idAnimalType\": 1\r\n}"
+		}
+	]
+}

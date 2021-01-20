@@ -20,26 +20,20 @@
             The animal service
             </summary>
         </member>
-        <member name="F:ApiZoo.Controllers.AnimalsController._appSettings">
-            <summary>
-            The application settings
-            </summary>
-        </member>
         <member name="F:ApiZoo.Controllers.AnimalsController._logger">
             <summary>
             The logger
             </summary>
         </member>
-        <member name="M:ApiZoo.Controllers.AnimalsController.#ctor(AutoMapper.IMapper,Microsoft.Extensions.Options.IOptions{ZooDto.AppSettingsDto},Microsoft.Extensions.Logging.ILogger{ApiZoo.Controllers.AnimalsController},ZooService.Contracts.Manager.IAnimalManager)">
+        <member name="M:ApiZoo.Controllers.AnimalsController.#ctor(AutoMapper.IMapper,Microsoft.Extensions.Logging.ILogger{ApiZoo.Controllers.AnimalsController},ZooService.Contracts.Manager.IAnimalManager)">
             <summary>
             Initializes a new instance of the <see cref="T:ApiZoo.Controllers.AnimalsController"/> class.
             </summary>
             <param name="imapper">The imapper.</param>
-            <param name="appSettings">The application settings.</param>
             <param name="logger">The logger.</param>
             <param name="animalService">The animal service.</param>
         </member>
-        <member name="M:ApiZoo.Controllers.AnimalsController.GetAllPositionsByAsync">
+        <member name="M:ApiZoo.Controllers.AnimalsController.GetAllAnimalsByAsync">
             <summary>
             Gets all animal's information asynchronous.
             </summary>
@@ -78,7 +72,7 @@
             <response code="405">Method Not Allowed.</response> 
             <response code="500">Internal Server Error.</response> 
         </member>
-        <member name="M:ApiZoo.Controllers.AnimalsController.GetAnimalsByIdAsync(System.Int32)">
+        <member name="M:ApiZoo.Controllers.AnimalsController.GetAnimalByIdAsync(System.Int32)">
             <summary>
             Gets one animal's information asynchronous.
             </summary>
@@ -147,6 +141,50 @@
             <param name="patchObj">The animal's partial information.</param>
             <returns>Return status update partial</returns>
             <response code="200">Succeeded Partial Updated.</response>
+            <response code="400">Bad Request.</response> 
+            <response code="401">Unauthorized.</response> 
+            <response code="403">Forbidden</response> 
+            <response code="405">Method Not Allowed.</response> 
+            <response code="500">Internal Server Error.</response> 
+        </member>
+        <member name="T:ApiZoo.Controllers.TypesAnimalsController">
+            <summary>
+            Controller for types animals
+            </summary>
+            <seealso cref="T:Microsoft.AspNetCore.Mvc.ControllerBase" />
+        </member>
+        <member name="F:ApiZoo.Controllers.TypesAnimalsController._typeAnimalService">
+            <summary>
+            The animal service
+            </summary>
+        </member>
+        <member name="F:ApiZoo.Controllers.TypesAnimalsController._logger">
+            <summary>
+            The logger
+            </summary>
+        </member>
+        <member name="M:ApiZoo.Controllers.TypesAnimalsController.#ctor(Microsoft.Extensions.Logging.ILogger{ApiZoo.Controllers.TypesAnimalsController},ZooService.Contracts.Manager.ITypeAnimalManager)">
+            <summary>
+            Initializes a new instance of the <see cref="T:ApiZoo.Controllers.TypesAnimalsController"/> class.
+            </summary>
+            <param name="imapper">The imapper.</param>
+            <param name="appSettings">The application settings.</param>
+            <param name="logger">The logger.</param>
+            <param name="typeAnimalService">The type animal service.</param>
+        </member>
+        <member name="M:ApiZoo.Controllers.TypesAnimalsController.GetAllTypesAnimalsByAsync">
+            <summary>
+            Gets all types of animal's information asynchronous.
+            </summary>
+            <remarks>
+            Example:
+            
+                Get /api/v1/TypesAnimals
+                
+            </remarks>
+            <returns>Return the all types of animals information.</returns>
+            <response code="200">Succeeded.</response>
+            <response code="204">Succeeded but not found elements.</response>
             <response code="400">Bad Request.</response> 
             <response code="401">Unauthorized.</response> 
             <response code="403">Forbidden</response> 

@@ -5,7 +5,6 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.JsonPatch;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using Microsoft.Extensions.Options;
 using Swashbuckle.AspNetCore.Annotations;
 using System;
 using System.ComponentModel.DataAnnotations;
@@ -20,7 +19,7 @@ namespace ApiZoo.Controllers
     /// <summary>
     /// Animal Controller
     /// </summary>
-    /// <seealso cref="Microsoft.AspNetCore.Mvc.ControllerBase" />
+    /// <seealso cref="ControllerBase" />
     [SwaggerTag("Animal Group Endpoints")]
     [Route("api/v1")]
     [Produces("application/json")]
@@ -38,10 +37,6 @@ namespace ApiZoo.Controllers
         /// </summary>
         private IAnimalManager _animalService;
         /// <summary>
-        /// The application settings
-        /// </summary>
-        private readonly AppSettingsDto _appSettings;
-        /// <summary>
         /// The logger
         /// </summary>
         private readonly ILogger _logger;
@@ -49,13 +44,11 @@ namespace ApiZoo.Controllers
         /// Initializes a new instance of the <see cref="AnimalsController"/> class.
         /// </summary>
         /// <param name="imapper">The imapper.</param>
-        /// <param name="appSettings">The application settings.</param>
         /// <param name="logger">The logger.</param>
         /// <param name="animalService">The animal service.</param>
-        public AnimalsController(IMapper imapper, IOptions<AppSettingsDto> appSettings, ILogger<AnimalsController> logger, IAnimalManager animalService)
+        public AnimalsController(IMapper imapper, ILogger<AnimalsController> logger, IAnimalManager animalService)
         {
             _imapper = imapper;
-            _appSettings = appSettings.Value;
             _logger = logger;
             _animalService = animalService;
         }
@@ -84,7 +77,7 @@ namespace ApiZoo.Controllers
         [SwaggerResponse(200, Type = typeof(ResponseCollectionDto<ZooAnimalDto>))]
         [SwaggerResponse(400, Type = typeof(ResponseErrorDto))]
         [SwaggerResponse(500, Type = typeof(ResponseErrorDto))]
-        public async Task<IActionResult> GetAllPositionsByAsync()
+        public async Task<IActionResult> GetAllAnimalsByAsync()
         {
             try
             {
@@ -177,7 +170,7 @@ namespace ApiZoo.Controllers
         [SwaggerResponse(200, Type = typeof(ResponseDto<ZooAnimalDto>))]
         [SwaggerResponse(400, Type = typeof(ResponseErrorDto))]
         [SwaggerResponse(500, Type = typeof(ResponseErrorDto))]
-        public async Task<IActionResult> GetAnimalsByIdAsync([FromRoute][Required] int id)
+        public async Task<IActionResult> GetAnimalByIdAsync([FromRoute][Required] int id)
         {
             try
             {
@@ -222,7 +215,7 @@ namespace ApiZoo.Controllers
                 if (!ModelState.IsValid)
                     return BadRequest(new ResponseErrorDto((int)HttpStatusCode.BadRequest, "Review Required Parameters"));
                 var created = await _animalService.CreateAnimalAsync(obj,User.GetIdUser());
-                return CreatedAtAction(nameof(GetAnimalsByIdAsync).Replace("Async", string.Empty), new { id = created }, new ResponseDto<ZooAnimalRegisterDto>((int)HttpStatusCode.Created, "Ok", obj));
+                return CreatedAtAction(nameof(GetAnimalByIdAsync).Replace("Async", string.Empty), new { id = created }, new ResponseDto<ZooAnimalRegisterDto>((int)HttpStatusCode.Created, "Ok", obj));
             }
             catch (ExceptionDto exdto)
             {

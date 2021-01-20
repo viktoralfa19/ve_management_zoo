@@ -304,5 +304,26 @@
             The type of the identifier animal.
             </value>
         </member>
+        <member name="T:ZooDto.ZooTypeAnimalDto">
+            <summary>
+            Dto for informaction of type animal
+            </summary>
+        </member>
+        <member name="P:ZooDto.ZooTypeAnimalDto.Id">
+            <summary>
+            Gets or sets the identifier.
+            </summary>
+            <value>
+            The identifier.
+            </value>
+        </member>
+        <member name="P:ZooDto.ZooTypeAnimalDto.Name">
+            <summary>
+            Gets or sets the name.
+            </summary>
+            <value>
+            The name.
+            </value>
+        </member>
     </members>
 </doc>

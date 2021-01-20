@@ -95,11 +95,13 @@ namespace ApiZoo
 
             #region Scope manager
             services.AddScoped<IAnimalManager, AnimalManager>();
+            services.AddScoped<ITypeAnimalManager, TypeAnimalManager>();
             #endregion
 
             #region Scope repository
             services.AddScoped<IGetData<Animal>, GetRepository<Animal>>();
             services.AddScoped<ICrudBasic<Animal>, CrudRepository<Animal>>();
+            services.AddScoped<IGetData<AnimalType>, GetRepository<AnimalType>>();
             #endregion
 
             var secret = Encoding.ASCII.GetBytes(appSettings.Secret);

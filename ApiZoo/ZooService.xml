@@ -90,6 +90,36 @@
             <returns>Status for the deleting</returns>
             <exception cref="T:ZooDto.ExceptionDto">There was an error when storing the animal information.</exception>
         </member>
+        <member name="T:ZooService.Business.TypeAnimalManager">
+            <summary>
+            Manager for types animals data
+            </summary>
+        </member>
+        <member name="F:ZooService.Business.TypeAnimalManager._logger">
+            <summary>
+            The logger
+            </summary>
+        </member>
+        <member name="F:ZooService.Business.TypeAnimalManager._typeAnimalDal">
+            <summary>
+            The type animal dal
+            </summary>
+        </member>
+        <member name="M:ZooService.Business.TypeAnimalManager.#ctor(AutoMapper.IMapper,Microsoft.Extensions.Logging.ILogger{ZooService.Business.AnimalManager},ZooService.Contracts.Repository.IGetData{ZooService.Models.AnimalType})">
+            <summary>
+            Initializes a new instance of the <see cref="T:ZooService.Business.TypeAnimalManager"/> class.
+            </summary>
+            <param name="imapper">The imapper.</param>
+            <param name="logger">The logger.</param>
+            <param name="getTypeAnimalRepository">The get type animal repository.</param>
+        </member>
+        <member name="M:ZooService.Business.TypeAnimalManager.GetAllTypeAnimalsAsync">
+            <summary>
+            Gets all type animals asynchronous.
+            </summary>
+            <returns></returns>
+            <exception cref="T:ZooDto.ExceptionDto">There was an error getting all the animals data.</exception>
+        </member>
         <member name="T:ZooService.Contracts.Manager.IAnimalManager">
             <summary>
             Interface for management animal's information
@@ -137,6 +167,17 @@
             Deletes the animal asynchronous.
             </summary>
             <param name="animalId">The animal identifier.</param>
+            <returns></returns>
+        </member>
+        <member name="T:ZooService.Contracts.Manager.ITypeAnimalManager">
+            <summary>
+            Interface for management the types animals data
+            </summary>
+        </member>
+        <member name="M:ZooService.Contracts.Manager.ITypeAnimalManager.GetAllTypeAnimalsAsync">
+            <summary>
+            Gets all type animals asynchronous.
+            </summary>
             <returns></returns>
         </member>
         <member name="T:ZooService.Contracts.Repository.ICrudBasic`1">
@@ -264,6 +305,41 @@
             <param name="animalId">The animal identifier.</param>
             <returns>Status for the deleting</returns>
             <exception cref="T:ZooDto.ExceptionDto">There was an error when delete the animal information.</exception>
+        </member>
+        <member name="T:ZooService.Data.TypeAnimalDal">
+            <summary>
+            Access data of Type Animal
+            </summary>
+        </member>
+        <member name="F:ZooService.Data.TypeAnimalDal._imapper">
+            <summary>
+            The imapper
+            </summary>
+        </member>
+        <member name="F:ZooService.Data.TypeAnimalDal._logger">
+            <summary>
+            The logger
+            </summary>
+        </member>
+        <member name="F:ZooService.Data.TypeAnimalDal._getAnimalTypeRepository">
+            <summary>
+            The get animal type repository
+            </summary>
+        </member>
+        <member name="M:ZooService.Data.TypeAnimalDal.#ctor(AutoMapper.IMapper,Microsoft.Extensions.Logging.ILogger,ZooService.Contracts.Repository.IGetData{ZooService.Models.AnimalType})">
+            <summary>
+            Initializes a new instance of the <see cref="T:ZooService.Data.TypeAnimalDal"/> class.
+            </summary>
+            <param name="imapper">The imapper.</param>
+            <param name="logger">The logger.</param>
+            <param name="getAnimalTypeRepository">The get animal type repository.</param>
+        </member>
+        <member name="M:ZooService.Data.TypeAnimalDal.GetAllTypeAnimalsAsync">
+            <summary>
+            Gets all type animals asynchronous.
+            </summary>
+            <returns></returns>
+            <exception cref="T:ZooDto.ExceptionDto">There was an error getting all the animals data.</exception>
         </member>
         <member name="T:ZooService.Models.Animal">
             <summary>

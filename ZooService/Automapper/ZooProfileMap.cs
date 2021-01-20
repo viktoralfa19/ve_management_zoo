@@ -19,6 +19,7 @@ namespace ZooService.Automapper
                 .ForMember(dto => dto.TypeName, conf => conf.MapFrom(entity => entity.AnimalType.Name))
                 .ForMember(dto => dto.TypeId, conf => conf.MapFrom(entity => entity.IdAnimalType));
             CreateMap<ZooAnimalRegisterDto, Animal>();
+            CreateMap<AnimalType, ZooTypeAnimalDto>();
             CreateMap<ZooAnimalDto, ZooAnimalRegisterDto>()
                 .ForMember(dto => dto.IdAnimalType, conf => conf.MapFrom(dto => dto.TypeId));
         }
