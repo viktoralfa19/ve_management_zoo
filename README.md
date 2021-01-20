@@ -5,6 +5,7 @@
 **cd D:\..\..\ve_management_zoo**
 
 **docker build -t victoralfa19/ve_zoo_webapi_security:v1.0.0 -f .\Dockerfile.Security --build-arg "ENVIRONMENT=Staging"  .**
+
 **docker build -t victoralfa19/ve_zoo_webapi_zoo:v1.0.0 -f .\Dockerfile.Zoo --build-arg "ENVIRONMENT=Staging"  .**
 
 #Probar la imagen en entorno de desarrollo con docker
@@ -21,19 +22,23 @@
 #Prametros: $select, $expand
 
 **[{"key":"$select","value":"data","description":""}]**
+
 **[{"key":"$expand","value":"data($select = Name,Weight,TypeName;$skip = 0;$top = 3;$filter = TypeName eq 'León')","description":""}]**
 
 #Ejemplo par Type Animal
 #Prametros: $select, $expand
 
 **[{"key":"$select","value":"data","description":""}]**
+
 **[{"key":"$expand","value":"data($filter = Name eq 'León')","description":""}]**
 
 
 #Adjunto en el código se encuentra el archivo exportado de POSTMAN para cargarlo y facilitar las pruebas funcionales al usuario el archivo se denomina:
+
 **API ZOO.postman_collection.json**
 
 Para la autenticación existen dos usuarios:
 
 Usuario 1: **vecheverria**, con rol **Administrador**, clave **Vecheverria.2020**
+
 Usuario 2: **babarca**, con rol **Funcionario**, clave **Vecheverria.2020**
