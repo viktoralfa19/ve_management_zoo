@@ -1,0 +1,244 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ApiZoo</name>
+    </assembly>
+    <members>
+        <member name="T:ApiZoo.Controllers.AnimalsController">
+            <summary>
+            Animal Controller
+            </summary>
+            <seealso cref="T:Microsoft.AspNetCore.Mvc.ControllerBase" />
+        </member>
+        <member name="F:ApiZoo.Controllers.AnimalsController._imapper">
+            <summary>
+            The imapper/
+            </summary>
+        </member>
+        <member name="F:ApiZoo.Controllers.AnimalsController._animalService">
+            <summary>
+            The animal service
+            </summary>
+        </member>
+        <member name="F:ApiZoo.Controllers.AnimalsController._appSettings">
+            <summary>
+            The application settings
+            </summary>
+        </member>
+        <member name="F:ApiZoo.Controllers.AnimalsController._logger">
+            <summary>
+            The logger
+            </summary>
+        </member>
+        <member name="M:ApiZoo.Controllers.AnimalsController.#ctor(AutoMapper.IMapper,Microsoft.Extensions.Options.IOptions{ZooDto.AppSettingsDto},Microsoft.Extensions.Logging.ILogger{ApiZoo.Controllers.AnimalsController},ZooService.Contracts.Manager.IAnimalManager)">
+            <summary>
+            Initializes a new instance of the <see cref="T:ApiZoo.Controllers.AnimalsController"/> class.
+            </summary>
+            <param name="imapper">The imapper.</param>
+            <param name="appSettings">The application settings.</param>
+            <param name="logger">The logger.</param>
+            <param name="animalService">The animal service.</param>
+        </member>
+        <member name="M:ApiZoo.Controllers.AnimalsController.GetAllPositionsByAsync">
+            <summary>
+            Gets all animal's information asynchronous.
+            </summary>
+            <remarks>
+            Example:
+            
+                Get /api/v1/Animals
+                
+            </remarks>
+            <returns>Return the animal's information.</returns>
+            <response code="200">Succeeded.</response>
+            <response code="204">Succeeded but not found elements.</response>
+            <response code="400">Bad Request.</response> 
+            <response code="401">Unauthorized.</response> 
+            <response code="403">Forbidden</response> 
+            <response code="405">Method Not Allowed.</response> 
+            <response code="500">Internal Server Error.</response> 
+        </member>
+        <member name="M:ApiZoo.Controllers.AnimalsController.GetAllAnimalsByTypeAsync(System.Int16)">
+            <summary>
+            Gets all animal's information asynchronous.
+            </summary>
+            <remarks>
+            Example:
+            
+                Get /api/v1/animals/type/1
+                
+            </remarks>
+            /// <param name="id">The type animal.</param>
+            <returns>Return the animal's information.</returns>
+            <response code="200">Succeeded.</response>
+            <response code="204">Succeeded but not found elements.</response>
+            <response code="400">Bad Request.</response> 
+            <response code="401">Unauthorized.</response> 
+            <response code="403">Forbidden</response> 
+            <response code="405">Method Not Allowed.</response> 
+            <response code="500">Internal Server Error.</response> 
+        </member>
+        <member name="M:ApiZoo.Controllers.AnimalsController.GetAnimalsByIdAsync(System.Int32)">
+            <summary>
+            Gets one animal's information asynchronous.
+            </summary>
+            <remarks>
+            Example:
+            
+                Get /api/v1/animals/1
+                
+            </remarks>
+            <returns>Return one animal's information.</returns>
+            <response code="200">Succeeded.</response>
+            <response code="204">Succeeded but not found elements.</response>
+            <response code="400">Bad Request.</response> 
+            <response code="401">Unauthorized.</response> 
+            <response code="403">Forbidden</response> 
+            <response code="405">Method Not Allowed.</response> 
+            <response code="500">Internal Server Error.</response> 
+            <param name="id">The identifier.</param>
+            <returns>Return one animal information</returns>
+        </member>
+        <member name="M:ApiZoo.Controllers.AnimalsController.CreatePositionAsync(ZooDto.ZooAnimalRegisterDto)">
+            <summary>
+            Creates the animal of Zoo asynchronous.
+            </summary>
+            <param name="obj">The animal's information.</param>
+            <returns>Return status created</returns>
+            <response code="201">Succeeded Created.</response>
+            <response code="400">Bad Request.</response> 
+            <response code="401">Unauthorized.</response> 
+            <response code="403">Forbidden</response> 
+            <response code="405">Method Not Allowed.</response> 
+            <response code="500">Internal Server Error.</response> 
+        </member>
+        <member name="M:ApiZoo.Controllers.AnimalsController.UpdatePositionAsync(System.Int32,ZooDto.ZooAnimalRegisterDto)">
+            <summary>
+            Updates the animal of Zoo asynchronous.
+            </summary>
+            <param name="id">The animal's id.</param>
+            <param name="obj">The animal's information.</param>
+            <returns>Return status updated</returns>
+            <response code="201">Succeeded Created.</response>
+            <response code="400">Bad Request.</response> 
+            <response code="401">Unauthorized.</response> 
+            <response code="403">Forbidden</response> 
+            <response code="405">Method Not Allowed.</response> 
+            <response code="500">Internal Server Error.</response> 
+        </member>
+        <member name="M:ApiZoo.Controllers.AnimalsController.DeletePositionAsync(System.Int32)">
+            <summary>
+            Delete the animal of Zoo asynchronous.
+            </summary>
+            <param name="id">The animal's id.</param>
+            <returns>Return status delete</returns>
+            <response code="201">Succeeded Created.</response>
+            <response code="400">Bad Request.</response> 
+            <response code="401">Unauthorized.</response> 
+            <response code="403">Forbidden</response> 
+            <response code="405">Method Not Allowed.</response> 
+            <response code="500">Internal Server Error.</response> 
+        </member>
+        <member name="M:ApiZoo.Controllers.AnimalsController.PatchPositionAsync(System.Int32,Microsoft.AspNetCore.JsonPatch.JsonPatchDocument{ZooDto.ZooAnimalRegisterDto})">
+            <summary>
+            Updates Partial the animal of Zoo asynchronous.
+            </summary>
+            <param name="id">The animal's id.</param>
+            <param name="patchObj">The animal's partial information.</param>
+            <returns>Return status update partial</returns>
+            <response code="201">Succeeded Created.</response>
+            <response code="400">Bad Request.</response> 
+            <response code="401">Unauthorized.</response> 
+            <response code="403">Forbidden</response> 
+            <response code="405">Method Not Allowed.</response> 
+            <response code="500">Internal Server Error.</response> 
+        </member>
+        <member name="T:ApiZoo.Models.ODataQueryOptionsFilter">
+            <summary>
+            Class for options of query with ODATA
+            </summary>
+            <seealso cref="T:Swashbuckle.AspNetCore.SwaggerGen.IOperationFilter" />
+        </member>
+        <member name="M:ApiZoo.Models.ODataQueryOptionsFilter.Apply(Microsoft.OpenApi.Models.OpenApiOperation,Swashbuckle.AspNetCore.SwaggerGen.OperationFilterContext)">
+            <summary>
+            Applies the specified operation.
+            </summary>
+            <param name="operation">The operation.</param>
+            <param name="context">The context.</param>
+        </member>
+        <member name="T:ApiZoo.Models.UserExtend">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:ApiZoo.Models.UserExtend.GetIdUser(System.Security.Principal.IPrincipal)">
+            <summary>
+            Gets the identifier user.
+            </summary>
+            <param name="user">The user.</param>
+            <returns></returns>
+        </member>
+        <member name="T:ApiZoo.Program">
+            <summary>
+            Principal Class
+            </summary>
+        </member>
+        <member name="M:ApiZoo.Program.Main(System.String[])">
+            <summary>
+            Defines the entry point of the application.
+            </summary>
+            <param name="args">The arguments.</param>
+        </member>
+        <member name="M:ApiZoo.Program.CreateHostBuilder(System.String[])">
+            <summary>
+            Creates the host builder.
+            </summary>
+            <param name="args">The arguments.</param>
+            <returns></returns>
+        </member>
+        <member name="T:ApiZoo.Startup">
+            <summary>
+            Startup
+            </summary>
+        </member>
+        <member name="F:ApiZoo.Startup._env">
+            <summary>
+            The env
+            </summary>
+        </member>
+        <member name="P:ApiZoo.Startup.Configuration">
+            <summary>
+            Gets the configuration.
+            </summary>
+            <value>
+            The configuration.
+            </value>
+        </member>
+        <member name="M:ApiZoo.Startup.#ctor(Microsoft.Extensions.Configuration.IConfiguration,Microsoft.AspNetCore.Hosting.IWebHostEnvironment)">
+            <summary>
+            Initializes a new instance of the <see cref="T:ApiZoo.Startup"/> class.
+            </summary>
+            <param name="configuration">The configuration.</param>
+            <param name="env">The env.</param>
+        </member>
+        <member name="M:ApiZoo.Startup.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            This method gets called by the runtime. Use this method to add services to the container.
+            </summary>
+            <param name="services">The services.</param>
+        </member>
+        <member name="M:ApiZoo.Startup.Configure(Microsoft.AspNetCore.Builder.IApplicationBuilder,Microsoft.AspNetCore.Hosting.IWebHostEnvironment)">
+            <summary>
+            This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
+            </summary>
+            <param name="app">The application.</param>
+            <param name="env">The env.</param>
+        </member>
+        <member name="M:ApiZoo.Startup.SetOutputFormatters(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            Sets the output formatters.
+            </summary>
+            <param name="services">The services.</param>
+        </member>
+    </members>
+</doc>

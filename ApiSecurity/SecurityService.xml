@@ -1,0 +1,138 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>SecurityService</name>
+    </assembly>
+    <members>
+        <member name="T:SecurityService.Business.ApplicationUserManager">
+            <summary>
+            Security Generate Token Class
+            </summary>
+            <seealso cref="T:SecurityService.Contracts.IApplicationUserManager" />
+        </member>
+        <member name="F:SecurityService.Business.ApplicationUserManager._logger">
+            <summary>
+            The logger
+            </summary>
+        </member>
+        <member name="F:SecurityService.Business.ApplicationUserManager._signInManager">
+            <summary>
+            The sign in manager
+            </summary>
+        </member>
+        <member name="F:SecurityService.Business.ApplicationUserManager._userManager">
+            <summary>
+            The user manager
+            </summary>
+        </member>
+        <member name="M:SecurityService.Business.ApplicationUserManager.#ctor(Microsoft.AspNetCore.Identity.UserManager{SecurityService.Models.ApplicationUser},Microsoft.AspNetCore.Identity.SignInManager{SecurityService.Models.ApplicationUser},Microsoft.Extensions.Logging.ILogger{SecurityService.Business.ApplicationUserManager})">
+            <summary>
+            Initializes a new instance of the <see cref="T:SecurityService.Business.ApplicationUserManager"/> class.
+            </summary>
+            <param name="userManager">The user manager.</param>
+            <param name="signInManager">The sign in manager.</param>
+            <param name="logger">The logger.</param>
+        </member>
+        <member name="M:SecurityService.Business.ApplicationUserManager.FindUserAsync(System.String,System.String)">
+            <summary>
+            Finds the user asynchronous.
+            </summary>
+            <param name="username">The username.</param>
+            <param name="password">The password.</param>
+            <returns></returns>
+            <exception cref="T:SecurityDto.ExceptionDto">
+            Does'n exist the user
+            or
+            There was an error searching for the user
+            </exception>
+        </member>
+        <member name="M:SecurityService.Business.ApplicationUserManager.GetToken(SecurityDto.CredentialsDto,SecurityDto.AppSettingsDto)">
+            <summary>
+            Gets the token.
+            </summary>
+            <param name="model">The model.</param>
+            <param name="appSettings">The application settings.</param>
+            <returns></returns>
+            <exception cref="T:SecurityDto.ExceptionDto">
+            Username or Password are incorrect.
+            or
+            There was an error generating the Authentication Token. The user could not be authenticated
+            </exception>
+        </member>
+        <member name="T:SecurityService.Contracts.IApplicationUserManager">
+            <summary>
+            Interface Application User
+            </summary>
+        </member>
+        <member name="M:SecurityService.Contracts.IApplicationUserManager.GetToken(SecurityDto.CredentialsDto,SecurityDto.AppSettingsDto)">
+            <summary>
+            Gets the token.
+            </summary>
+            <param name="user">The user.</param>
+            <param name="appSettings">The application settings.</param>
+            <returns></returns>
+        </member>
+        <member name="T:SecurityService.Models.ApplicationRole">
+            <summary>
+            Application Role
+            </summary>
+            <seealso cref="T:Microsoft.AspNetCore.Identity.IdentityRole`1" />
+        </member>
+        <member name="T:SecurityService.Models.ApplicationUser">
+            <summary>
+            Application User
+            </summary>
+            <seealso cref="T:Microsoft.AspNetCore.Identity.IdentityUser`1" />
+        </member>
+        <member name="T:SecurityService.Models.ApplicationUserRole">
+            <summary>
+            Application User - Role
+            </summary>
+            <seealso cref="T:Microsoft.AspNetCore.Identity.IdentityUserRole`1" />
+        </member>
+        <member name="P:SecurityService.Models.ApplicationUserRole.UserId">
+            <summary>
+            Gets or sets the primary key of the user that is linked to a role.
+            </summary>
+        </member>
+        <member name="P:SecurityService.Models.ApplicationUserRole.RoleId">
+            <summary>
+            Gets or sets the primary key of the role that is linked to the user.
+            </summary>
+        </member>
+        <member name="P:SecurityService.Models.ApplicationUserRole.User">
+            <summary>
+            Gets or sets the user.
+            </summary>
+            <value>
+            The user.
+            </value>
+        </member>
+        <member name="P:SecurityService.Models.ApplicationUserRole.Role">
+            <summary>
+            Gets or sets the role.
+            </summary>
+            <value>
+            The role.
+            </value>
+        </member>
+        <member name="T:SecurityService.SecurityContext">
+            <summary>
+            Seucurity Context Class
+            </summary>
+            <seealso cref="T:Microsoft.AspNetCore.Identity.EntityFrameworkCore.IdentityDbContext`3" />
+        </member>
+        <member name="M:SecurityService.SecurityContext.#ctor(Microsoft.EntityFrameworkCore.DbContextOptions{SecurityService.SecurityContext})">
+            <summary>
+            Initializes a new instance of the <see cref="T:SecurityService.SecurityContext"/> class.
+            </summary>
+            <param name="options">The options.</param>
+        </member>
+        <member name="M:SecurityService.SecurityContext.OnModelCreating(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <summary>
+            Configures the schema needed for the identity framework.
+            </summary>
+            <param name="builder">The builder being used to construct the model for this context.</param>
+        </member>
+    </members>
+</doc>

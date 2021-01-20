@@ -1,0 +1,27 @@
+FROM mcr.microsoft.com/dotnet/core/aspnet:3.1-alpine AS base
+WORKDIR /app
+EXPOSE 80
+EXPOSE 443
+
+FROM mcr.microsoft.com/dotnet/core/sdk:3.1-alpine AS build
+WORKDIR /src
+COPY ["ApiSecurity/ApiSecurity.csproj", "ApiSecurity/"]
+COPY ["SecurityService/SecurityService.csproj", "SecurityService/"]
+COPY ["SecurityDto/SecurityDto.csproj", "SecurityDto/"]
+RUN dotnet restore "ApiSecurity/ApiSecurity.csproj"
+COPY . .
+WORKDIR "/src/ApiSecurity"
+RUN dotnet build "ApiSecurity.csproj" -c Release -o /app/build
+
+FROM build AS publish
+RUN dotnet publish "ApiSecurity.csproj" -c Release -o /app/publish
+
+FROM base AS final
+ARG ENVIRONMENT=Production
+ENV ASPNETCORE_ENVIRONMENT=${ENVIRONMENT}
+WORKDIR /app
+COPY --from=publish /app/publish .
+RUN apk add --no-cache icu-libs
+ENV DOTNET_SYSTEM_GLOBALIZATION_INVARIANT=false
+RUN rm -rf appsettings.*.json
+ENTRYPOINT ["dotnet", "ApiSecurity.dll"]

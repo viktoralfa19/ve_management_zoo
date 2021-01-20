@@ -1,0 +1,65 @@
+version: '3.8'
+services: 
+    dbsecuritypostgresql:
+        container_name: dbsecuritypostgresql
+        image: postgres:latest
+        env_file:
+            - ./.security.env
+        ports: 
+            - "5454:5432"
+        networks:
+            - zoonet
+        volumes:
+            - ./docker_security_postgres_init.sql:/docker-entrypoint-initdb.d/docker_postgres_init.sql
+
+    dbzoopostgresql:
+        container_name: dbzoopostgresql
+        image: postgres:latest
+        env_file:
+            - ./.zoo.env
+        ports: 
+            - "5455:5432"
+        networks:
+            - zoonet
+        volumes:
+            - ./docker_zoo_postgres_init.sql:/docker-entrypoint-initdb.d/docker_postgres_init.sql
+
+    ve_security:
+        container_name: ve_security
+        image: victoralfa19/ve_zoo_webapi_security:v1.0.0
+        environment: 
+            ENVIRONMENT_USER_CONECTION: "Server=dbsecuritypostgresql;Port=5432;Database=security;User Id=security_manager;Password=#Secmanager.2021#"
+            Key: "E546C8DF278CD5931069B522E695D4F2"
+            Secret: TGEgY29kaWZpY2FjacOzbiBkZSBjYXJhY3RlcmVzIGVzIGVsIG3DqXRvZG8gcXVlIHBlcm1pdGUgY29udmVydGlyIHVuIGNhcsOhY3RlciBkZSB1biBsZW5ndWFqZSBuYXR1cmFsIChjb21vIGVsIGRlIHVuIGFsZmFiZXRvIG8gc2lsYWJhcmlvKSBlbiB1biBzw61tYm9sbyBkZSBvdHJvIHNpc3RlbWEgZGUgcmVwcmVzZW50YWNpw7NuLCBjb21vIHVuIG7Dum1lcm8gbyB1bmEgc2VjdWVuY2lhIGRlIHB1bHNvcyBlbMOpY3RyaWNvcyBlbiB1biBzaXN0ZW1hIGVsZWN0csOzbmljbywgYXBsaWNhbmRvIG5vcm1hcyBvIHJlZ2xhcyBkZSBjb2RpZmljYWNpw7NuLg==
+            ExpiresDays: "1"
+            Audience: "https://localhost:5000/"
+            Issuer: "https://localhost:5000/token"
+            UrlServerSwagger: "http://localhost:5010/"
+        depends_on: 
+            - dbsecuritypostgresql
+        ports: 
+            - "5010:80"
+        networks:
+            - zoonet
+            
+    ve_zoo:
+        container_name: ve_zoo
+        image: victoralfa19/ve_zoo_webapi_zoo:v1.0.0
+        environment: 
+            ENVIRONMENT_ZOO_CONECTION: "Server=dbzoopostgresql;Port=5432;Database=zoodb;User Id=zoo_manager;Password=#Zoomanager.2021#"
+            Key: "E546C8DF278CD5931069B522E695D4F2"
+            Secret: TGEgY29kaWZpY2FjacOzbiBkZSBjYXJhY3RlcmVzIGVzIGVsIG3DqXRvZG8gcXVlIHBlcm1pdGUgY29udmVydGlyIHVuIGNhcsOhY3RlciBkZSB1biBsZW5ndWFqZSBuYXR1cmFsIChjb21vIGVsIGRlIHVuIGFsZmFiZXRvIG8gc2lsYWJhcmlvKSBlbiB1biBzw61tYm9sbyBkZSBvdHJvIHNpc3RlbWEgZGUgcmVwcmVzZW50YWNpw7NuLCBjb21vIHVuIG7Dum1lcm8gbyB1bmEgc2VjdWVuY2lhIGRlIHB1bHNvcyBlbMOpY3RyaWNvcyBlbiB1biBzaXN0ZW1hIGVsZWN0csOzbmljbywgYXBsaWNhbmRvIG5vcm1hcyBvIHJlZ2xhcyBkZSBjb2RpZmljYWNpw7NuLg==
+            ExpiresDays: "1"
+            Audience: "https://localhost:5000/"
+            Issuer: "https://localhost:5000/token"
+            UrlServerSwagger: "http://localhost:5011/"
+        depends_on: 
+            - dbzoopostgresql
+        ports: 
+            - "5011:80"
+        networks:
+            - zoonet
+
+networks:
+    zoonet:
+        driver: bridge

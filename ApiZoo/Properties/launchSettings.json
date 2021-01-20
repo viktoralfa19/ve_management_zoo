@@ -4,26 +4,33 @@
     "windowsAuthentication": false,
     "anonymousAuthentication": true,
     "iisExpress": {
-      "applicationUrl": "http://localhost:58843",
-      "sslPort": 44320
+      "applicationUrl": "http://localhost:5011",
+      "sslPort": 0
     }
   },
   "profiles": {
     "IIS Express": {
       "commandName": "IISExpress",
-      "launchBrowser": true,
-      "launchUrl": "weatherforecast",
-      "environmentVariables": {
-        "ASPNETCORE_ENVIRONMENT": "Development"
-      }
+      "launchBrowser": true
     },
-    "ApiZoo": {
+    "Zoo.Development": {
       "commandName": "Project",
       "launchBrowser": true,
-      "launchUrl": "weatherforecast",
-      "applicationUrl": "https://localhost:5001;http://localhost:5000",
+      "applicationUrl": "https://localhost:6003;http://localhost:6004"
+    },
+    "Zoo.Staging": {
+      "commandName": "IISExpress",
+      "launchBrowser": true,
       "environmentVariables": {
-        "ASPNETCORE_ENVIRONMENT": "Development"
+        "ASPNETCORE_ENVIRONMENT": "Staging"
+      }
+    },
+    "Zoo.Production": {
+      "commandName": "IISExpress",
+      "launchBrowser": true,
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Production",
+        "ENVIRONMENT_SECURITY_CONEXION": "Server=dbpostgresql;Port=5432;Database=ZooDb;User Id=postgres;Password=#Vecheverria.2020#"
       }
     }
   }

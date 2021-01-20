@@ -1,0 +1,10 @@
+#Comandos para generar las imagenes de pruebas "Staging" o las productivas "Production"
+
+docker build -t victoralfa19/ve_zoo_webapi_security:v1.0.0 -f .\Dockerfile.Security --build-arg "ENVIRONMENT=Staging"  .
+docker build -t victoralfa19/ve_zoo_webapi_zoo:v1.0.0 -f .\Dockerfile.Zoo --build-arg "ENVIRONMENT=Staging"  .
+
+#Probar la imagen en entorno de desarrollo solamente
+
+#Crear localmente el contenedor y probarlo con docker compose, si se encuentra dentro del directorio donde esta el archivo docker-compose.yaml,
+#sino indicar el directorio específico del archivo.
+#2.- docker-compose up -d

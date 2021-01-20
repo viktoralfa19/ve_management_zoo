@@ -1,0 +1,212 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>SecurityDto</name>
+    </assembly>
+    <members>
+        <member name="T:SecurityDto.AppSettingsDto">
+            <summary>
+            App Settings
+            </summary>
+        </member>
+        <member name="P:SecurityDto.AppSettingsDto.Secret">
+            <summary>
+            Gets or sets the secret.
+            </summary>
+            <value>
+            The secret.
+            </value>
+        </member>
+        <member name="P:SecurityDto.AppSettingsDto.Audience">
+            <summary>
+            Gets or sets the audience.
+            </summary>
+            <value>
+            The audience.
+            </value>
+        </member>
+        <member name="P:SecurityDto.AppSettingsDto.Issuer">
+            <summary>
+            Gets or sets the issuer.
+            </summary>
+            <value>
+            The issuer.
+            </value>
+        </member>
+        <member name="P:SecurityDto.AppSettingsDto.ExpiresDays">
+            <summary>
+            Gets or sets the expires days.
+            </summary>
+            <value>
+            The expires days.
+            </value>
+        </member>
+        <member name="P:SecurityDto.AppSettingsDto.UrlServerSwagger">
+            <summary>
+            Gets or sets the URL server swagger.
+            </summary>
+            <value>
+            The URL server swagger.
+            </value>
+        </member>
+        <member name="T:SecurityDto.CredentialsDto">
+            <summary>
+            Credentials Class
+            </summary>
+        </member>
+        <member name="P:SecurityDto.CredentialsDto.Username">
+            <summary>
+            Gets or sets the username.
+            </summary>
+            <value>
+            The username.
+            </value>
+        </member>
+        <member name="P:SecurityDto.CredentialsDto.Password">
+            <summary>
+            Gets or sets the password.
+            </summary>
+            <value>
+            The password.
+            </value>
+        </member>
+        <member name="T:SecurityDto.ExceptionDto">
+            <summary>
+            Custom Exception Class
+            </summary>
+            <seealso cref="T:System.Exception" />
+        </member>
+        <member name="F:SecurityDto.ExceptionDto._id">
+            <summary>
+            The identifier
+            </summary>
+        </member>
+        <member name="P:SecurityDto.ExceptionDto.Id">
+            <summary>
+            Gets or sets the identifier.
+            </summary>
+            <value>
+            The identifier.
+            </value>
+        </member>
+        <member name="P:SecurityDto.ExceptionDto.UserMessage">
+            <summary>
+            Gets or sets the mensaje usuario.
+            </summary>
+            <value>
+            The mensaje usuario.
+            </value>
+        </member>
+        <member name="M:SecurityDto.ExceptionDto.IsNullId">
+            <summary>
+            Determines whether [is null identifier].
+            </summary>
+            <returns>
+              <c>true</c> if [is null identifier]; otherwise, <c>false</c>.
+            </returns>
+        </member>
+        <member name="M:SecurityDto.ExceptionDto.#ctor(System.Guid,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:SecurityDto.ExceptionDto"/> class.
+            </summary>
+            <param name="id">The identifier.</param>
+            <param name="mensaje">The mensaje.</param>
+        </member>
+        <member name="T:SecurityDto.IdentityTokenDto">
+            <summary>
+            Identity Token Class
+            </summary>
+        </member>
+        <member name="P:SecurityDto.IdentityTokenDto.Token">
+            <summary>
+            Gets or sets the token.
+            </summary>
+            <value>
+            The token.
+            </value>
+        </member>
+        <member name="P:SecurityDto.IdentityTokenDto.ValidateFrom">
+            <summary>
+            Gets or sets the validate from.
+            </summary>
+            <value>
+            The validate from.
+            </value>
+        </member>
+        <member name="P:SecurityDto.IdentityTokenDto.ValidateTo">
+            <summary>
+            Gets or sets the validate to.
+            </summary>
+            <value>
+            The validate to.
+            </value>
+        </member>
+        <member name="T:SecurityDto.ResponseDto`1">
+            <summary>
+            Response Class
+            </summary>
+        </member>
+        <member name="M:SecurityDto.ResponseDto`1.#ctor(System.Int32,System.String,`0,System.Nullable{System.Guid})">
+            <summary>
+            Initializes a new instance of the <see cref="T:SecurityDto.ResponseDto`1"/> class.
+            </summary>
+            <param name="status">The status.</param>
+            <param name="message">The message.</param>
+            <param name="data">The data.</param>
+            <param name="id">The identifier.</param>
+        </member>
+        <member name="P:SecurityDto.ResponseDto`1.status">
+            <summary>
+            Gets or sets the status.
+            </summary>
+            <value>
+            The status.
+            </value>
+        </member>
+        <member name="P:SecurityDto.ResponseDto`1.message">
+            <summary>
+            Gets or sets the message.
+            </summary>
+            <value>
+            The message.
+            </value>
+        </member>
+        <member name="P:SecurityDto.ResponseDto`1.data">
+            <summary>
+            Gets or sets the data.
+            </summary>
+            <value>
+            The data.
+            </value>
+        </member>
+        <member name="T:SecurityDto.ResponseErrorDto">
+            <summary>
+            DTo for resposne error into API
+            </summary>
+        </member>
+        <member name="M:SecurityDto.ResponseErrorDto.#ctor(System.Int32,System.String,System.Nullable{System.Guid})">
+            <summary>
+            Initializes a new instance of the <see cref="T:SecurityDto.ResponseErrorDto"/> class.
+            </summary>
+            <param name="status">The status.</param>
+            <param name="message">The message.</param>
+            <param name="id">The identifier.</param>
+        </member>
+        <member name="P:SecurityDto.ResponseErrorDto.Status">
+            <summary>
+            Gets or sets the Status.
+            </summary>
+            <value>
+            The Status.
+            </value>
+        </member>
+        <member name="P:SecurityDto.ResponseErrorDto.Message">
+            <summary>
+            Gets or sets the Message.
+            </summary>
+            <value>
+            The Message.
+            </value>
+        </member>
+    </members>
+</doc>

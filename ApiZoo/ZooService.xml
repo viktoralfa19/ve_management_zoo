@@ -1,0 +1,515 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ZooService</name>
+    </assembly>
+    <members>
+        <member name="T:ZooService.Automapper.ZooProfileMap">
+            <summary>
+            Mapper from entities to Dto's and the other way around
+            </summary>
+            <seealso cref="T:AutoMapper.Profile" />
+        </member>
+        <member name="M:ZooService.Automapper.ZooProfileMap.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:ZooService.Automapper.ZooProfileMap"/> class.
+            </summary>
+        </member>
+        <member name="T:ZooService.Business.AnimalManager">
+            <summary>
+            Manager class for Animal Entity
+            </summary>
+            <seealso cref="T:ZooService.Contracts.Manager.IAnimalManager" />
+        </member>
+        <member name="F:ZooService.Business.AnimalManager._logger">
+            <summary>
+            The logger
+            </summary>
+        </member>
+        <member name="F:ZooService.Business.AnimalManager._animalDal">
+            <summary>
+            The animal DAL
+            </summary>
+        </member>
+        <member name="M:ZooService.Business.AnimalManager.#ctor(AutoMapper.IMapper,Microsoft.Extensions.Logging.ILogger{ZooService.Business.AnimalManager},ZooService.Contracts.Repository.IGetData{ZooService.Models.Animal},ZooService.Contracts.Repository.ICrudBasic{ZooService.Models.Animal})">
+            <summary>
+            Initializes a new instance of the <see cref="T:ZooService.Business.AnimalManager"/> class.
+            </summary>
+            <param name="imapper">The imapper.</param>
+            <param name="logger">The logger.</param>
+            <param name="getAnimalRepository">The get animal repository.</param>
+            <param name="crudAnimalRepository">The crud animal repository.</param>
+        </member>
+        <member name="M:ZooService.Business.AnimalManager.GetAllAnimalsAsync">
+            <summary>
+            Gets all animals asynchronous.
+            </summary>
+            <returns></returns>
+            <exception cref="T:ZooDto.ExceptionDto">guid, There was an error getting all the animals data.</exception>
+        </member>
+        <member name="M:ZooService.Business.AnimalManager.GetAllAnimalsByTypeAnimalAsync(System.Int16)">
+            <summary>
+            Gets all animals by type animal asynchronous.
+            </summary>
+            <param name="animalTypeId">The animal type identifier.</param>
+            <returns></returns>
+            <exception cref="T:ZooDto.ExceptionDto">There was an error getting all the animals data.</exception>
+        </member>
+        <member name="M:ZooService.Business.AnimalManager.GetAnimalByIdAsync(System.Int32)">
+            <summary>
+            Gets the animal by identifier asynchronous.
+            </summary>
+            <param name="animalId">The animal identifier.</param>
+            <returns></returns>
+            <exception cref="T:ZooDto.ExceptionDto">There was an error getting all the animals data.</exception>
+        </member>
+        <member name="M:ZooService.Business.AnimalManager.CreateAnimalAsync(ZooDto.ZooAnimalRegisterDto,System.Guid)">
+            <summary>
+            Creates the animal asynchronous.
+            </summary>
+            <param name="obj">The object.</param>
+            <param name="userId">The user identifier.</param>
+            <returns>Status for the creating</returns>
+            <exception cref="T:ZooDto.ExceptionDto">There was an error when storing the animal information.</exception>
+        </member>
+        <member name="M:ZooService.Business.AnimalManager.UpdateAnimalAsync(System.Int32,ZooDto.ZooAnimalRegisterDto,System.Guid)">
+            <summary>
+            Updates the animal asynchronous.
+            </summary>
+            <param name="animalId">The animal identifier.</param>
+            <param name="obj">The object.</param>
+            <param name="userId">The user identifier.</param>
+            <returns>Status for the updatig</returns>
+            <exception cref="T:ZooDto.ExceptionDto">There was an error when storing the animal information.</exception>
+        </member>
+        <member name="M:ZooService.Business.AnimalManager.DeleteAnimalAsync(System.Int32)">
+            <summary>
+            Deletes the animal asynchronous.
+            </summary>
+            <param name="animalId">The animal identifier.</param>
+            <returns>Status for the deleting</returns>
+            <exception cref="T:ZooDto.ExceptionDto">There was an error when storing the animal information.</exception>
+        </member>
+        <member name="T:ZooService.Contracts.Manager.IAnimalManager">
+            <summary>
+            Interface for management animal's information
+            </summary>
+        </member>
+        <member name="M:ZooService.Contracts.Manager.IAnimalManager.GetAllAnimalsAsync">
+            <summary>
+            Gets all animals asynchronous.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ZooService.Contracts.Manager.IAnimalManager.GetAllAnimalsByTypeAnimalAsync(System.Int16)">
+            <summary>
+            Gets all animals by type animal asynchronous.
+            </summary>
+            <param name="animalTypeId">The animal type identifier.</param>
+            <returns></returns>
+        </member>
+        <member name="M:ZooService.Contracts.Manager.IAnimalManager.CreateAnimalAsync(ZooDto.ZooAnimalRegisterDto,System.Guid)">
+            <summary>
+            Creates the animal asynchronous.
+            </summary>
+            <param name="obj">The object.</param>
+            <param name="userId">The user identifier.</param>
+            <returns></returns>
+        </member>
+        <member name="M:ZooService.Contracts.Manager.IAnimalManager.GetAnimalByIdAsync(System.Int32)">
+            <summary>
+            Gets the animal by identifier asynchronous.
+            </summary>
+            <param name="animalId">The animal identifier.</param>
+            <returns></returns>
+        </member>
+        <member name="M:ZooService.Contracts.Manager.IAnimalManager.UpdateAnimalAsync(System.Int32,ZooDto.ZooAnimalRegisterDto,System.Guid)">
+            <summary>
+            Updates the animal asynchronous.
+            </summary>
+            <param name="animalId">The animal identifier.</param>
+            <param name="obj">The object.</param>
+            <param name="userId">The user identifier.</param>
+            <returns></returns>
+        </member>
+        <member name="M:ZooService.Contracts.Manager.IAnimalManager.DeleteAnimalAsync(System.Int32)">
+            <summary>
+            Deletes the animal asynchronous.
+            </summary>
+            <param name="animalId">The animal identifier.</param>
+            <returns></returns>
+        </member>
+        <member name="T:ZooService.Contracts.Repository.ICrudBasic`1">
+            <summary>
+            Méthods for Create, Update and Delete
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="M:ZooService.Contracts.Repository.ICrudBasic`1.Add(`0)">
+            <summary>
+            Adds the specified object.
+            </summary>
+            <param name="obj">The object.</param>
+        </member>
+        <member name="M:ZooService.Contracts.Repository.ICrudBasic`1.Update(`0)">
+            <summary>
+            Updates the specified object.
+            </summary>
+            <param name="obj">The object.</param>
+        </member>
+        <member name="M:ZooService.Contracts.Repository.ICrudBasic`1.Delete(`0)">
+            <summary>
+            Deletes the specified entity.
+            </summary>
+            <param name="entity">The entity.</param>
+        </member>
+        <member name="M:ZooService.Contracts.Repository.ICrudBasic`1.SaveChangesAsync">
+            <summary>
+            Saves the changes asynchronous.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:ZooService.Contracts.Repository.IGetData`1">
+            <summary>
+            Get data from repository
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="M:ZooService.Contracts.Repository.IGetData`1.Get">
+            <summary>
+            Gets this instance.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:ZooService.Data.AnimalDal">
+            <summary>
+            Data Access Layer for Animal
+            </summary>
+        </member>
+        <member name="F:ZooService.Data.AnimalDal._imapper">
+            <summary>
+            The imapper
+            </summary>
+        </member>
+        <member name="F:ZooService.Data.AnimalDal._logger">
+            <summary>
+            The logger
+            </summary>
+        </member>
+        <member name="F:ZooService.Data.AnimalDal._getAnimalRepository">
+            <summary>
+            The get animal repository
+            </summary>
+        </member>
+        <member name="F:ZooService.Data.AnimalDal._crudAnimalRepository">
+            <summary>
+            The crud animal repository
+            </summary>
+        </member>
+        <member name="M:ZooService.Data.AnimalDal.#ctor(AutoMapper.IMapper,Microsoft.Extensions.Logging.ILogger,ZooService.Contracts.Repository.IGetData{ZooService.Models.Animal},ZooService.Contracts.Repository.ICrudBasic{ZooService.Models.Animal})">
+            <summary>
+            Initializes a new instance of the <see cref="T:ZooService.Data.AnimalDal"/> class.
+            </summary>
+            <param name="imapper">The imapper.</param>
+            <param name="logger">The logger.</param>
+            <param name="getAnimalRepository">The get animal repository.</param>
+            <param name="crudAnimalRepository">The crud animal repository.</param>
+        </member>
+        <member name="M:ZooService.Data.AnimalDal.GetAllAnimalsAsync">
+            <summary>
+            Gets all animals asynchronous.
+            </summary>
+            <returns>Return a list of animal's information</returns>
+            <exception cref="T:ZooDto.ExceptionDto">There was an error getting all the employee charge data.</exception>
+        </member>
+        <member name="M:ZooService.Data.AnimalDal.GetAllAnimalsByPredicateAsync(System.Linq.Expressions.Expression{System.Func{ZooService.Models.Animal,System.Boolean}})">
+            <summary>
+            Gets all animals by predicate asynchronous.
+            </summary>
+            <param name="predicate">The predicate.</param>
+            <returns></returns>
+            <exception cref="T:ZooDto.ExceptionDto">There was an error getting all the animals data.</exception>
+        </member>
+        <member name="M:ZooService.Data.AnimalDal.GetAnimalsByPredicateAsync(System.Linq.Expressions.Expression{System.Func{ZooService.Models.Animal,System.Boolean}})">
+            <summary>
+            Gets all animals by predicate asynchronous.
+            </summary>
+            <param name="predicate">The predicate.</param>
+            <returns></returns>
+            <exception cref="T:ZooDto.ExceptionDto">There was an error getting all the animals data.</exception>
+        </member>
+        <member name="M:ZooService.Data.AnimalDal.CreateAnimalAsync(ZooDto.ZooAnimalRegisterDto,System.Guid)">
+            <summary>
+            Creates the animal asynchronous.
+            </summary>
+            <param name="obj">The object.</param>
+            <param name="userId">The user identifier.</param>
+            <returns>Status for the creating</returns>
+            <exception cref="T:ZooDto.ExceptionDto">There was an error when storing the animal information.</exception>
+        </member>
+        <member name="M:ZooService.Data.AnimalDal.UpdateAnimalAsync(System.Int32,ZooDto.ZooAnimalRegisterDto,System.Guid)">
+            <summary>
+            Updates the animal asynchronous.
+            </summary>
+            <param name="animalId">The animal identifier.</param>
+            <param name="obj">The object.</param>
+            <param name="userId">The user identifier.</param>
+            <returns>Status for the updating</returns>
+            <exception cref="T:ZooDto.ExceptionDto">There was an error when update the animal information.</exception>
+        </member>
+        <member name="M:ZooService.Data.AnimalDal.DeleteAnimalAsync(System.Int32)">
+            <summary>
+            Deletes the animal asynchronous.
+            </summary>
+            <param name="animalId">The animal identifier.</param>
+            <returns>Status for the deleting</returns>
+            <exception cref="T:ZooDto.ExceptionDto">There was an error when delete the animal information.</exception>
+        </member>
+        <member name="T:ZooService.Models.Animal">
+            <summary>
+            Animal Class
+            </summary>
+        </member>
+        <member name="P:ZooService.Models.Animal.Id">
+            <summary>
+            Gets or sets the identifier.
+            </summary>
+            <value>
+            The identifier.
+            </value>
+        </member>
+        <member name="P:ZooService.Models.Animal.IdAnimalType">
+            <summary>
+            Gets or sets the type of the identifier animal.
+            </summary>
+            <value>
+            The type of the identifier animal.
+            </value>
+        </member>
+        <member name="P:ZooService.Models.Animal.Code">
+            <summary>
+            Gets or sets the code.
+            </summary>
+            <value>
+            The code.
+            </value>
+        </member>
+        <member name="P:ZooService.Models.Animal.Name">
+            <summary>
+            Gets or sets the name.
+            </summary>
+            <value>
+            The name.
+            </value>
+        </member>
+        <member name="P:ZooService.Models.Animal.DateAdmission">
+            <summary>
+            Gets or sets the date admission.
+            </summary>
+            <value>
+            The date admission.
+            </value>
+        </member>
+        <member name="P:ZooService.Models.Animal.Weight">
+            <summary>
+            Gets or sets the weight.
+            </summary>
+            <value>
+            The weight.
+            </value>
+        </member>
+        <member name="P:ZooService.Models.Animal.DateCreated">
+            <summary>
+            Gets or sets the date created.
+            </summary>
+            <value>
+            The date created.
+            </value>
+        </member>
+        <member name="P:ZooService.Models.Animal.DateUpdated">
+            <summary>
+            Gets or sets the date updated.
+            </summary>
+            <value>
+            The date updated.
+            </value>
+        </member>
+        <member name="P:ZooService.Models.Animal.UserCreated">
+            <summary>
+            Gets or sets the user created.
+            </summary>
+            <value>
+            The user created.
+            </value>
+        </member>
+        <member name="P:ZooService.Models.Animal.UserUpdated">
+            <summary>
+            Gets or sets the user updated.
+            </summary>
+            <value>
+            The user updated.
+            </value>
+        </member>
+        <member name="P:ZooService.Models.Animal.AnimalType">
+            <summary>
+            Gets or sets the type of the animal.
+            </summary>
+            <value>
+            The type of the animal.
+            </value>
+        </member>
+        <member name="T:ZooService.Models.AnimalType">
+            <summary>
+            Animal Type Class
+            </summary>
+        </member>
+        <member name="M:ZooService.Models.AnimalType.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:ZooService.Models.AnimalType"/> class.
+            </summary>
+        </member>
+        <member name="P:ZooService.Models.AnimalType.Id">
+            <summary>
+            Gets or sets the identifier.
+            </summary>
+            <value>
+            The identifier.
+            </value>
+        </member>
+        <member name="P:ZooService.Models.AnimalType.Code">
+            <summary>
+            Gets or sets the code.
+            </summary>
+            <value>
+            The code.
+            </value>
+        </member>
+        <member name="P:ZooService.Models.AnimalType.Name">
+            <summary>
+            Gets or sets the name.
+            </summary>
+            <value>
+            The name.
+            </value>
+        </member>
+        <member name="P:ZooService.Models.AnimalType.Animals">
+            <summary>
+            Gets or sets the animals.
+            </summary>
+            <value>
+            The animals.
+            </value>
+        </member>
+        <member name="T:ZooService.Repository.CrudRepository`1">
+            <summary>
+            Méthods for Create, Update and Delete
+            </summary>
+            <typeparam name="T"></typeparam>
+            <seealso cref="T:ZooService.Contracts.Repository.ICrudBasic`1" />
+        </member>
+        <member name="F:ZooService.Repository.CrudRepository`1._dbContext">
+            <summary>
+            The database context
+            </summary>
+        </member>
+        <member name="M:ZooService.Repository.CrudRepository`1.#ctor(ZooService.ZooContext)">
+            <summary>
+            Initializes a new instance of the <see cref="T:ZooService.Repository.CrudRepository`1"/> class.
+            </summary>
+            <param name="dbContext">The database context.</param>
+        </member>
+        <member name="M:ZooService.Repository.CrudRepository`1.Add(`0)">
+            <summary>
+            Adds the specified object.
+            </summary>
+            <param name="obj">The object.</param>
+        </member>
+        <member name="M:ZooService.Repository.CrudRepository`1.Update(`0)">
+            <summary>
+            Updates the specified object.
+            </summary>
+            <param name="obj">The object.</param>
+        </member>
+        <member name="M:ZooService.Repository.CrudRepository`1.Delete(`0)">
+            <summary>
+            Deletes the specified entity.
+            </summary>
+            <param name="entity">The entity.</param>
+        </member>
+        <member name="M:ZooService.Repository.CrudRepository`1.SaveChangesAsync">
+            <summary>
+            Saves the changes asynchronous.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:ZooService.Repository.GetRepository`1">
+            <summary>
+            Get data ffrom Database
+            </summary>
+            <seealso cref="T:ZooService.Contracts.Repository.IGetData`1" />
+        </member>
+        <member name="F:ZooService.Repository.GetRepository`1._dbContext">
+            <summary>
+            The database context
+            </summary>
+        </member>
+        <member name="M:ZooService.Repository.GetRepository`1.#ctor(ZooService.ZooContext)">
+            <summary>
+            Initializes a new instance of the <see cref="T:ZooService.Repository.GetRepository`1"/> class.
+            </summary>
+            <param name="dbContext">The database context.</param>
+        </member>
+        <member name="M:ZooService.Repository.GetRepository`1.Get">
+            <summary>
+            Gets this instance.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:ZooService.ZooContext">
+            <summary>
+            Zoo Context Class
+            </summary>
+        </member>
+        <member name="M:ZooService.ZooContext.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:ZooService.ZooContext"/> class.
+            </summary>
+        </member>
+        <member name="M:ZooService.ZooContext.#ctor(Microsoft.EntityFrameworkCore.DbContextOptions{ZooService.ZooContext})">
+            <summary>
+            Initializes a new instance of the <see cref="T:ZooService.ZooContext"/> class.
+            </summary>
+            <param name="options">The options.</param>
+        </member>
+        <member name="P:ZooService.ZooContext.Animal">
+            <summary>
+            Gets or sets the animal.
+            </summary>
+            <value>
+            The animal.
+            </value>
+        </member>
+        <member name="P:ZooService.ZooContext.AnimalType">
+            <summary>
+            Gets or sets the type of the animal.
+            </summary>
+            <value>
+            The type of the animal.
+            </value>
+        </member>
+        <member name="M:ZooService.ZooContext.OnModelCreating(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <summary>
+            Override this method to further configure the model that was discovered by convention from the entity types
+            exposed in <see cref="T:Microsoft.EntityFrameworkCore.DbSet`1" /> properties on your derived context. The resulting model may be cached
+            and re-used for subsequent instances of your derived context.
+            </summary>
+            <param name="modelBuilder">The builder being used to construct the model for this context. Databases (and other extensions) typically
+            define extension methods on this object that allow you to configure aspects of the model that are specific
+            to a given database.</param>
+            <remarks>
+            If a model is explicitly set on the options for this context (via <see cref="M:Microsoft.EntityFrameworkCore.DbContextOptionsBuilder.UseModel(Microsoft.EntityFrameworkCore.Metadata.IModel)" />)
+            then this method will not be run.
+            </remarks>
+        </member>
+    </members>
+</doc>

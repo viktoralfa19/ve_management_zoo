@@ -1,0 +1,308 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ZooDto</name>
+    </assembly>
+    <members>
+        <member name="T:ZooDto.AppSettingsDto">
+            <summary>
+            App Settings
+            </summary>
+        </member>
+        <member name="P:ZooDto.AppSettingsDto.Secret">
+            <summary>
+            Gets or sets the secret.
+            </summary>
+            <value>
+            The secret.
+            </value>
+        </member>
+        <member name="P:ZooDto.AppSettingsDto.Audience">
+            <summary>
+            Gets or sets the audience.
+            </summary>
+            <value>
+            The audience.
+            </value>
+        </member>
+        <member name="P:ZooDto.AppSettingsDto.Issuer">
+            <summary>
+            Gets or sets the issuer.
+            </summary>
+            <value>
+            The issuer.
+            </value>
+        </member>
+        <member name="P:ZooDto.AppSettingsDto.ExpiresDays">
+            <summary>
+            Gets or sets the expires days.
+            </summary>
+            <value>
+            The expires days.
+            </value>
+        </member>
+        <member name="P:ZooDto.AppSettingsDto.UrlServerSwagger">
+            <summary>
+            Gets or sets the URL server swagger.
+            </summary>
+            <value>
+            The URL server swagger.
+            </value>
+        </member>
+        <member name="T:ZooDto.ExceptionDto">
+            <summary>
+            Custom Exception Class
+            </summary>
+            <seealso cref="T:System.Exception" />
+        </member>
+        <member name="F:ZooDto.ExceptionDto._id">
+            <summary>
+            The identifier
+            </summary>
+        </member>
+        <member name="P:ZooDto.ExceptionDto.Id">
+            <summary>
+            Gets or sets the identifier.
+            </summary>
+            <value>
+            The identifier.
+            </value>
+        </member>
+        <member name="P:ZooDto.ExceptionDto.UserMessage">
+            <summary>
+            Gets or sets the mensaje usuario.
+            </summary>
+            <value>
+            The mensaje usuario.
+            </value>
+        </member>
+        <member name="M:ZooDto.ExceptionDto.IsNullId">
+            <summary>
+            Determines whether [is null identifier].
+            </summary>
+            <returns>
+              <c>true</c> if [is null identifier]; otherwise, <c>false</c>.
+            </returns>
+        </member>
+        <member name="M:ZooDto.ExceptionDto.#ctor(System.Guid,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:ZooDto.ExceptionDto"/> class.
+            </summary>
+            <param name="id">The identifier.</param>
+            <param name="mensaje">The mensaje.</param>
+        </member>
+        <member name="T:ZooDto.ResponseCollectionDto`1">
+            <summary>
+            DTO for response data from API
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="M:ZooDto.ResponseCollectionDto`1.#ctor(System.Int32,System.String,System.Collections.Generic.ICollection{`0},System.Nullable{System.Guid})">
+            <summary>
+            Initializes a new instance of the <see cref="T:ZooDto.ResponseDto`1"/> class.
+            </summary>
+            <param name="status">The status.</param>
+            <param name="message">The message.</param>
+            <param name="data">The data.</param>
+            <param name="id">The identifier.</param>
+        </member>
+        <member name="P:ZooDto.ResponseCollectionDto`1.status">
+            <summary>
+            Gets or sets the status.
+            </summary>
+            <value>
+            The status.
+            </value>
+        </member>
+        <member name="P:ZooDto.ResponseCollectionDto`1.message">
+            <summary>
+            Gets or sets the message.
+            </summary>
+            <value>
+            The message.
+            </value>
+        </member>
+        <member name="P:ZooDto.ResponseCollectionDto`1.data">
+            <summary>
+            Gets or sets the data.
+            </summary>
+            <value>
+            The data.
+            </value>
+        </member>
+        <member name="T:ZooDto.ResponseDto`1">
+            <summary>
+            DTO for response data from API
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="M:ZooDto.ResponseDto`1.#ctor(System.Int32,System.String,`0,System.Nullable{System.Guid})">
+            <summary>
+            Initializes a new instance of the <see cref="T:ZooDto.ResponseDto`1"/> class.
+            </summary>
+            <param name="status">The status.</param>
+            <param name="message">The message.</param>
+            <param name="data">The data.</param>
+            <param name="id">The identifier.</param>
+        </member>
+        <member name="P:ZooDto.ResponseDto`1.status">
+            <summary>
+            Gets or sets the status.
+            </summary>
+            <value>
+            The status.
+            </value>
+        </member>
+        <member name="P:ZooDto.ResponseDto`1.message">
+            <summary>
+            Gets or sets the message.
+            </summary>
+            <value>
+            The message.
+            </value>
+        </member>
+        <member name="P:ZooDto.ResponseDto`1.data">
+            <summary>
+            Gets or sets the data.
+            </summary>
+            <value>
+            The data.
+            </value>
+        </member>
+        <member name="T:ZooDto.ResponseErrorDto">
+            <summary>
+            DTo for resposne error into API
+            </summary>
+        </member>
+        <member name="M:ZooDto.ResponseErrorDto.#ctor(System.Int32,System.String,System.Nullable{System.Guid})">
+            <summary>
+            Initializes a new instance of the <see cref="T:ZooDto.ResponseErrorDto"/> class.
+            </summary>
+            <param name="status">The status.</param>
+            <param name="message">The message.</param>
+            <param name="id">The identifier.</param>
+        </member>
+        <member name="P:ZooDto.ResponseErrorDto.Status">
+            <summary>
+            Gets or sets the Status.
+            </summary>
+            <value>
+            The Status.
+            </value>
+        </member>
+        <member name="P:ZooDto.ResponseErrorDto.Message">
+            <summary>
+            Gets or sets the Message.
+            </summary>
+            <value>
+            The Message.
+            </value>
+        </member>
+        <member name="T:ZooDto.ZooAnimalDto">
+            <summary>
+            Dto for transport animal's information
+            </summary>
+        </member>
+        <member name="P:ZooDto.ZooAnimalDto.Id">
+            <summary>
+            Gets or sets the identifier.
+            </summary>
+            <value>
+            The identifier.
+            </value>
+        </member>
+        <member name="P:ZooDto.ZooAnimalDto.Code">
+            <summary>
+            Gets or sets the code.
+            </summary>
+            <value>
+            The code.
+            </value>
+        </member>
+        <member name="P:ZooDto.ZooAnimalDto.Name">
+            <summary>
+            Gets or sets the name.
+            </summary>
+            <value>
+            The name.
+            </value>
+        </member>
+        <member name="P:ZooDto.ZooAnimalDto.DateAdmission">
+            <summary>
+            Gets or sets the date admission.
+            </summary>
+            <value>
+            The date admission.
+            </value>
+        </member>
+        <member name="P:ZooDto.ZooAnimalDto.Weight">
+            <summary>
+            Gets or sets the weight.
+            </summary>
+            <value>
+            The weight.
+            </value>
+        </member>
+        <member name="P:ZooDto.ZooAnimalDto.TypeId">
+            <summary>
+            Gets or sets the type identifier.
+            </summary>
+            <value>
+            The type identifier.
+            </value>
+        </member>
+        <member name="P:ZooDto.ZooAnimalDto.TypeName">
+            <summary>
+            Gets or sets the name of the type.
+            </summary>
+            <value>
+            The name of the type.
+            </value>
+        </member>
+        <member name="T:ZooDto.ZooAnimalRegisterDto">
+            <summary>
+            Register animal's information
+            </summary>
+        </member>
+        <member name="P:ZooDto.ZooAnimalRegisterDto.Code">
+            <summary>
+            Gets or sets the code.
+            </summary>
+            <value>
+            The code.
+            </value>
+        </member>
+        <member name="P:ZooDto.ZooAnimalRegisterDto.Name">
+            <summary>
+            Gets or sets the name.
+            </summary>
+            <value>
+            The name.
+            </value>
+        </member>
+        <member name="P:ZooDto.ZooAnimalRegisterDto.DateAdmission">
+            <summary>
+            Gets or sets the date admission.
+            </summary>
+            <value>
+            The date admission.
+            </value>
+        </member>
+        <member name="P:ZooDto.ZooAnimalRegisterDto.Weight">
+            <summary>
+            Gets or sets the weight.
+            </summary>
+            <value>
+            The weight.
+            </value>
+        </member>
+        <member name="P:ZooDto.ZooAnimalRegisterDto.IdAnimalType">
+            <summary>
+            Gets or sets the type of the identifier animal.
+            </summary>
+            <value>
+            The type of the identifier animal.
+            </value>
+        </member>
+    </members>
+</doc>
