@@ -119,7 +119,7 @@
             <param name="id">The animal's id.</param>
             <param name="obj">The animal's information.</param>
             <returns>Return status updated</returns>
-            <response code="201">Succeeded Created.</response>
+            <response code="200">Succeeded Updted.</response>
             <response code="400">Bad Request.</response> 
             <response code="401">Unauthorized.</response> 
             <response code="403">Forbidden</response> 
@@ -132,7 +132,7 @@
             </summary>
             <param name="id">The animal's id.</param>
             <returns>Return status delete</returns>
-            <response code="201">Succeeded Created.</response>
+            <response code="200">Succeeded Deleted.</response>
             <response code="400">Bad Request.</response> 
             <response code="401">Unauthorized.</response> 
             <response code="403">Forbidden</response> 
@@ -146,7 +146,7 @@
             <param name="id">The animal's id.</param>
             <param name="patchObj">The animal's partial information.</param>
             <returns>Return status update partial</returns>
-            <response code="201">Succeeded Created.</response>
+            <response code="200">Succeeded Partial Updated.</response>
             <response code="400">Bad Request.</response> 
             <response code="401">Unauthorized.</response> 
             <response code="403">Forbidden</response> 

@@ -17,9 +17,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SecurityService", "Security
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ApiSecurity", "ApiSecurity\ApiSecurity.csproj", "{29B91D76-8D45-4E9B-8E5E-E97725DE2D9C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SecurityDto", "SecurityDto\SecurityDto.csproj", "{10FF06F8-005A-4111-B09D-4F4BA53C5F0B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SecurityDto", "SecurityDto\SecurityDto.csproj", "{10FF06F8-005A-4111-B09D-4F4BA53C5F0B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZooDto", "ZooDto\ZooDto.csproj", "{7B8F7ECF-3E89-4F6E-A6F0-7D57FF8CE86B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ZooDto", "ZooDto\ZooDto.csproj", "{7B8F7ECF-3E89-4F6E-A6F0-7D57FF8CE86B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
