@@ -32,3 +32,8 @@
 
 #Adjunto en el código se encuentra el archivo exportado de POSTMAN para cargarlo y facilitar las pruebas funcionales al usuario el archivo se denomina:
 **API ZOO.postman_collection.json**
+
+Para la autenticación existen dos usuarios:
+
+Usuario 1: **vecheverria**, con rol **Administrador**, clave **Vecheverria.2020**
+Usuario 2: **babarca**, con rol **Funcionario**, clave **Vecheverria.2020**
